@@ -1,7 +1,10 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
 
 const CakeView = () => {
-  const numCakes = useSelector((state) => state.cake.numCakes)
+  const numCakes = useSelector((state) => state.cake.numCakes);
+  const dispatch = useDispatch();
+  
   return (
     <div>
       <h2>Number of cakes: {numCakes}</h2>
