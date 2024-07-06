@@ -1,4 +1,4 @@
-const createSlice = require('@reduxjs/toolkit').createSlice;
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   numIcecreams: 5
@@ -22,4 +22,5 @@ const icecreamSlice = createSlice({
   }
 });
 
-module.exports = icecreamSlice;
+export default icecreamSlice.reducer;
+export const { ordered, restocked } = icecreamSlice.actions;
