@@ -10,11 +10,11 @@ const initialState = {
 // Promise resolves to pending, fulfilled, or rejected action type
 export const fetchUsers = createAsyncThunk('users/fetchUsers', () => {
   return axios.get('https://jsonplaceholder.typicode.com/users')
-    .then((users) => users.data.map(user => user))
-})
+    .then((user) => user.data)
+});
 
 const userSlice = createSlice({
-  name: 'user',
+  name: 'users',
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchUsers.pending, state => {
