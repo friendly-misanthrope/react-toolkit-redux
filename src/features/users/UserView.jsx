@@ -4,6 +4,7 @@ import { fetchUsers } from "./userSlice";
 
 const UserView = () => {
   const userState = useSelector((state) => state.user);
+  const { loading, users, error } = userState;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -13,15 +14,15 @@ const UserView = () => {
   return (
     <div>
       <h2>List of users:</h2>
-      {userState.loading && <h3>Loading...</h3>}
-      {!userState.loading && userState.error ? (
+      {loading && <h3>Loading...</h3>}
+      {!loading && error ? (
         <h3>
-          Error: <p>{userState.error}</p>
+          Error: <p>{error}</p>
         </h3>
       ) : null}
-      {!userState.loading && userState.users.length ? (
+      {!loading && users.length ? (
         <ul>
-          {userState.users.map((user) => (
+          {users.map((user) => (
             <li key={user.id}>{user.name}</li>
           ))}
         </ul>
