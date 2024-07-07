@@ -37,7 +37,7 @@ const CakeView = () => {
   }
 
   return (
-    <div>
+    <div className='iceCakeDiv'>
       <h2>Number of cakes: {numCakes}</h2>
       <div>
         <form>
@@ -46,7 +46,7 @@ const CakeView = () => {
           <button onClick={restockHandler}>Restock cake</button>
         </form>
       </div>
-      <div className="order">
+      <div>
       <form>
         <label htmlFor="order">Number of cakes to order: </label>
         <input type="number" name="order" value={parseInt(cakes.order)} onChange={changeHandler} />

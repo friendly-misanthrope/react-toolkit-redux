@@ -37,19 +37,19 @@ const IcecreamView = () => {
 
   return (
     <div>
-      <h2>Number of icecreams: {numIcecreams}</h2>
+      <h2>Number of Ice Creams: {numIcecreams}</h2>
       <div>
         <form>
-          <label htmlFor="restock">Number of icecreams to restock:</label>
+          <label htmlFor="restock">Number of ice creams to restock:</label>
           <input type="number" name="restock" value={parseInt(icecreams.restock)} onChange={changeHandler} />
-          <button onClick={restockHandler}>Restock Icecreams</button>
+          <button onClick={restockHandler}>Restock ice creams</button>
         </form>
       </div>
       <div>
         <form>
-          <label htmlFor="order">Number of icecreams to order:</label>
+          <label htmlFor="order">Number of ice creams to order:</label>
           <input type="number" name="order" value={parseInt(icecreams.order)} onChange={changeHandler} />
-          <button onClick={orderHandler}>Order Icecreams</button>
+          <button onClick={orderHandler}>Order ice creams</button>
         </form>
       </div>
     </div>

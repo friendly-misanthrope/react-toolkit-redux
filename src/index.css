@@ -2,3 +2,18 @@
   text-align: center;
   margin-top: 10%;
 }
+
+ul {
+  padding: 1rem;
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+input {
+  margin: 0.5rem 0;
+}
+
+.iceCakeDiv {
+  margin: 1rem 0;
+  padding: 1rem;
+}

@@ -12,7 +12,7 @@ const UserView = () => {
   }, []);
 
   return (
-    <div>
+    <div className="iceCakeDiv">
       <h2>List of users:</h2>
       {loading && <h3>Loading...</h3>}
       {!loading && error ? (
@@ -23,7 +23,7 @@ const UserView = () => {
       {!loading && users.length ? (
         <ul>
           {users.map((user) => (
-            <li key={user.id}>{user.name}</li>
+            <li key={user.id}><b>Name: </b>{user.name},  <b>Email:</b> {user.email}</li>
           ))}
         </ul>
       ) : null}
