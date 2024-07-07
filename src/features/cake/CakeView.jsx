@@ -13,7 +13,9 @@ const CakeView = () => {
   });
 
   const changeHandler = (e) => {
-    setCakes(prevState => { return { ...prevState, [e.target.name]: parseInt(e.target.value) } })
+    setCakes(prevState => { return { 
+      ...prevState, [e.target.name]: parseInt(e.target.value) 
+    } });
   }
 
   const restockHandler = (e) => {
