@@ -16,7 +16,7 @@ const UserView = () => {
       <h2>List of users:</h2>
       {loading && <h3>Loading...</h3>}
       {!loading && error ? (
-        <h3>
+        <h3 className="error">
           Error: <p>{error}</p>
         </h3>
       ) : null}

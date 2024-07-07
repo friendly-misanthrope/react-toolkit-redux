@@ -9,7 +9,7 @@ const initialState = {
 
 // Promise resolves to pending, fulfilled, or rejected action type
 export const fetchUsers = createAsyncThunk('users/fetchUsers', () => {
-  return axios.get('https://jsonplaceholder.typicode.com/users')
+  return axios.get('https://jsonplaceholder.typicode.com/userss')
     .then((user) => user.data)
 });
 
